@@ -90,7 +90,9 @@ repositories {
 dependencies {
   api appProject
   implementation platform("com.google.firebase:firebase-bom:${ReactNative.ext.getVersion("firebase", "bom")}")
-  implementation "com.google.firebase:firebase-firestore"
+  //implementation "com.google.firebase:firebase-firestore"
+  // replaced to resolve error: cannot find symbol .whereNotEqualTo”, reference at https://stackoverflow.com/a/64603295/4895040 
+  implementation 'com.google.firebase:firebase-firestore:22.0.0'
 }
 
 ReactNative.shared.applyPackageVersion()
